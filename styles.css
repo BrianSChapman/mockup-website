@@ -1,0 +1,65 @@
+:root {
+    --cream: #F4F1DE;
+    --red-orange: #E07A5F;
+    --dark: #3D405B;
+    --soft-green: #81B29A;
+    --mustard:#F2CC8F;
+}
+
+body {
+    background-color: black;
+    font-family: 'Noto Serif Khojki', serif;
+}
+
+#logo-text {
+    font-family: 'Babylonica', cursive;
+    font-size: 70px;
+    color: var(--cream);
+}
+
+#barrel {
+  opacity:65%;
+  margin-top:1%;
+}
+
+.nav-center {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links {
+    font-weight:900;
+    font-size: 18px;
+    color: var(--cream);
+}
+
+.nav-links:hover {
+    color: var(--mustard);
+}
+
+
+
+#hamburger {
+    color:var(--cream);
+}
+
+
+.nav-wrapper {
+background-color: black;
+color: var(--cream);
+}
+
+#tapa-cloth {
+   opacity:65%;
+   position: relative;
+}
+
+.about-section {
+    color:var(--cream);
+    position: absolute;
+}
+
+.hero-slider {
+    width:100%;
+    
+}

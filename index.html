@@ -5,11 +5,81 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
-    <title>Restaurant Website</title>
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Babylonica&family=Noto+Serif+Khojki:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
   </head>
   <body>
+    <header class="center-align">
+        <a href="#" id="logo-text"">Stowe <img id="barrel" src="./Assets/barrel logo.png"alt = "Stowaway logo">Away</a>
+        <nav class="nav-wrapper">
+              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons" id="hamburger">menu</i></a>
+              <div class = "nav-center">
+              <ul class="hide-on-med-and-down">
+                <li><a class="active nav-links" href="#About">ABOUT</a></li>
+                <li><a href="#Cocktail" class="nav-links">COCKTAILS</a></li>
+                <li><a href="#Store" class="nav-links">STORE</a></li>
+                <li><a href="#Contact" class="nav-links">CONTACT</a></li>
+              </ul>
+              </div>
+          </nav>
+        </header>
 
+        <!-- Hamburger menu -->
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="#About">ABOUT</a></li>
+            <li><a href="#Cocktails">COCKTAILS</a></li>
+            <li><a href="#Store">STORE</a></li>
+            <li><a href="#Contact">CONTACT</a></li>
+          </ul>
 
-    <script src="../mockup-website/index.js"></script>
+    <section id="slider-container">
+        <ul>
+        <li>
+          <img class="hero-slider" src="./Assets/tikifeature.jpeg" alt="Tiki bar with hanging colorful lights"> 
+        </li>
+        <li>
+          <img class="hero-slider" src="./Assets/tiki drink resize.jpg" alt="overhead shot of tiki mug with cherry">
+        </li>
+        <li>
+          <img class="hero-slider" src="./Assets/daniel-gregoire-lgS0TnUPRpI-unsplash.jpg" alt="Gold mask artwork"> 
+        </li>
+        <li>
+            <img class="hero-slider" src="./Assets/TikiDrink1.jpg" alt="Image tiki mugs and a beer on a table" />
+        </li>
+    </ul>
+    <!-- Next and Previous arrow buttons -->
+    <a id="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a id="next" onclick="plusSlides(1)">&#10095;</a> 
+    </section>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
+  <main>
+    <img src="./Assets/tapaPrint.jpg" id="tapa-cloth">
+    <section class=" about-section">
+        <h3>A HIDDEN OASIS IN THE HEART OF STOWE, VT.</h3>
+    </section>
+  </main>  
+
+   
+<script src="./index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.6.3.min.js"
+  integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+  crossorigin="anonymous"></script>
   </body>
 </html>
