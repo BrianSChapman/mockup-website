@@ -58,12 +58,56 @@ color: var(--cream);
    width:100%;
 }
 
-.about-section-header {
+#about-section-text {
+    border: solid 10px var(--dark);
+}
+
+#about-section-header {
+    font-weight: 700;
+
+}
+
+#about-body {
+    bottom: 4%;
+    text-indent: 1cm;
+    text-align:center;
+}
+
+.about-section {
     color:black;
     position: absolute;
     bottom: 50%;
     left: 25%;
-    font-weight: 700;
+    margin-right:20%;
+    margin-left: 5%;
+}
+
+#compass {
+    position: absolute;
+    left: 45%;
+    top: 105%;
+    right: 14%;
+}
+
+.cocktails-container {
+    color: var(--cream);
+     font-family: 'Noto Serif Khojki', serif;
+     margin-top:5%;
+}
+
+#cocktails-header {
+    margin-bottom: 5%;
+}
+
+#cocktail-intro {
+    margin-right: 10%; 
+    color:var(--soft-green);
+}
+
+#cocktail-header-image {
+    object-fit: cover;
+    max-height: 400px;
+    
 }
 
 /* hero-image slider styling & animation */
