@@ -23,7 +23,7 @@
               <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons" id="hamburger">menu</i></a>
               <div class = "nav-center">
               <ul class="hide-on-med-and-down">
-                <li><a class="active nav-links" href="#About">ABOUT</a></li>
+                <li><a class="nav-links" href="#About">ABOUT</a></li>
                 <li><a href="#Cocktail" class="nav-links">COCKTAILS</a></li>
                 <li><a href="#Store" class="nav-links">STORE</a></li>
                 <li><a href="#Contact" class="nav-links">CONTACT</a></li>
@@ -41,20 +41,20 @@
           </ul>
 
     <section id="slider-container">
-        <ul>
-        <li>
-          <img class="hero-slider" src="./Assets/tikifeature.jpeg" alt="Tiki bar with hanging colorful lights"> 
-        </li>
-        <li>
-          <img class="hero-slider" src="./Assets/tiki drink resize.jpg" alt="overhead shot of tiki mug with cherry">
-        </li>
-        <li>
-          <img class="hero-slider" src="./Assets/daniel-gregoire-lgS0TnUPRpI-unsplash.jpg" alt="Gold mask artwork"> 
-        </li>
-        <li>
+        
+        <div class="mySlides fade">
+          <img class="hero-slider" src="./Assets/tikifeature.jpeg" style ="width:100%" alt="Tiki bar with hanging colorful lights"> 
+        </div>
+        <div class="mySlides fade">
+          <img class="hero-slider" src="./Assets/tiki drink resize.jpg" style ="width:100%" alt="overhead shot of tiki mug with cherry">
+        </div>
+        <div class="mySlides fade">
+          <img class="hero-slider" src="./Assets/daniel-gregoire-lgS0TnUPRpI-unsplash.jpg" style ="width:100%" alt="Gold mask artwork"> 
+        </div>
+        <div class="mySlides fade">
             <img class="hero-slider" src="./Assets/TikiDrink1.jpg" alt="Image tiki mugs and a beer on a table" />
-        </li>
-    </ul>
+        </div>
+
     <!-- Next and Previous arrow buttons -->
     <a id="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a id="next" onclick="plusSlides(1)">&#10095;</a> 
@@ -64,18 +64,16 @@
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
     </div>
 
-  <main>
-    <img src="./Assets/tapaPrint.jpg" id="tapa-cloth">
-    <section class=" about-section">
-        <h3>A HIDDEN OASIS IN THE HEART OF STOWE, VT.</h3>
-    </section>
-  </main>  
+  <section class = "center-align">
+    <img src="./Assets/tapaPrint.png" id="tapa-cloth" class="center-align">
+    <h3 class="about-section-header center-align">A HIDDEN OASIS IN THE HEART OF STOWE, VT.</h3>
+    <p></p>
+</section>  
 
    
-<script src="./index.js"></script>
+<script src="index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script
   src="https://code.jquery.com/jquery-3.6.3.min.js"
