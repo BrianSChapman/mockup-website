@@ -53,6 +53,7 @@ background-color: black;
 color: var(--cream);
 }
 
+/* about section/ banner image */
 #tapa-cloth {
    position: relative;
    width:100%;
@@ -64,13 +65,15 @@ color: var(--cream);
 
 #about-section-header {
     font-weight: 700;
+    top: 50%;
 
 }
 
 #about-body {
-    bottom: 4%;
+    top: 80%;
     text-indent: 1cm;
     text-align:center;
+
 }
 
 .about-section {
@@ -82,17 +85,13 @@ color: var(--cream);
     margin-left: 5%;
 }
 
-#compass {
-    position: absolute;
-    left: 45%;
-    top: 105%;
-    right: 14%;
-}
+/* about section END */
 
+/* cocktail menu */
 .cocktails-container {
     color: var(--cream);
      font-family: 'Noto Serif Khojki', serif;
-     margin-top:5%;
+     margin-top:10%;
 }
 
 #cocktails-header {
@@ -106,10 +105,38 @@ color: var(--cream);
 
 #cocktail-header-image {
     object-fit: cover;
-    max-height: 400px;
+    max-height: 300px;
     
 }
 
+.cocktail-menu-image {
+    margin-top:2%;
+    border-radius: 10%;
+    opacity:85%;
+    object-fit:cover;
+    max-height:350px;
+}
+
+
+#cocktail-list-header {
+    margin-left: 55%;
+    margin-bottom:5%;
+    color:var(--cream);
+}
+
+.cocktail-list-left {
+    color:var(--soft-green);
+}
+
+.drink-title {
+    color:var(--mustard);
+}
+
+
+.small {
+    color: var(--mustard);
+    padding: auto1; 
+}
 /* hero-image slider styling & animation */
 
 #slider-container {
@@ -171,3 +198,10 @@ color: var(--cream);
     from {opacity: .4}
     to {opacity: 1}
 }
+
+
+
+/*  todo:
+Design for desktop displays from 1024×768 through 1920×1080
+Design for mobile displays from 360×640 through 414×896
+Design for tablet displays from 601×962 through 1280×800 */
