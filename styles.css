@@ -111,7 +111,7 @@ color: var(--cream);
 
 .cocktail-menu-image {
     margin-top:2%;
-    border-radius: 10%;
+    border-radius: 4%;
     opacity:85%;
     object-fit:cover;
     max-height:350px;
@@ -124,19 +124,28 @@ color: var(--cream);
     color:var(--cream);
 }
 
-.cocktail-list-left {
+.menu-item {
     color:var(--soft-green);
+    margin-right: 2%;
+
 }
 
 .drink-title {
-    color:var(--mustard);
+    color:var(--cream);
 }
 
+.strength {
+    color:var(--red-orange);
+}
 
 .small {
     color: var(--mustard);
-    padding: auto1; 
+    padding: auto; 
 }
+
+
+
+
 /* hero-image slider styling & animation */
 
 #slider-container {
