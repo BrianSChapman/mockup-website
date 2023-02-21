@@ -110,7 +110,6 @@ color: var(--cream);
 }
 
 .cocktail-menu-image {
-    margin-top:2%;
     border-radius: 4%;
     opacity:85%;
     object-fit:cover;
@@ -126,8 +125,7 @@ color: var(--cream);
 
 .menu-item {
     color:var(--soft-green);
-    margin-right: 2%;
-
+    margin-bottom: 2%;
 }
 
 .drink-title {
@@ -140,7 +138,7 @@ color: var(--cream);
 }
 
 .drink-description {
-    margin: 20px 48px 0 0;
+    margin: 20px 48px 5px 0;
 }
 
 .strength {
@@ -152,6 +150,9 @@ color: var(--cream);
     padding: auto; 
 }
 
+#stem-drink {
+    max-height: 600px;
+}
 
 
 
