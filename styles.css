@@ -114,7 +114,7 @@ color: var(--cream);
     border-radius: 4%;
     opacity:85%;
     object-fit:cover;
-    max-height:350px;
+    max-height:500px;
 }
 
 
@@ -132,6 +132,15 @@ color: var(--cream);
 
 .drink-title {
     color:var(--cream);
+    font-size: 20px;
+}
+
+.drink-origin {
+    font-size:15px;
+}
+
+.drink-description {
+    margin: 20px 48px 0 0;
 }
 
 .strength {
