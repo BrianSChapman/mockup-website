@@ -1,7 +1,7 @@
 :root {
     --cream: #F4F1DE;
     --red-orange: #E07A5F;
-    --dark: #3D405B;
+    --dark: #14251d;
     --soft-green: #81B29A;
     --mustard:#F2CC8F;
 }
@@ -105,7 +105,7 @@ color: var(--cream);
 
 #cocktail-header-image {
     object-fit: cover;
-    max-height: 300px;
+    max-height: 325px;
     
 }
 
@@ -154,6 +154,16 @@ color: var(--cream);
     max-height: 600px;
 }
 
+
+
+footer {
+    background-color: var(--dark);
+    color: var(--cream);
+}
+
+.footer-links {
+    color:var(--cream);
+}
 
 
 /* hero-image slider styling & animation */
