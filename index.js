@@ -64,3 +64,26 @@ currentSlide =(n) => {
 //         slides[slideIndex-1].style.display = "block";
 //         setTimeout(showSlides, 8000);
 //     }
+
+
+// Map for the Footer
+
+// Initialize and add the map
+function initMap() {
+    // The location of Uluru
+    const stowe = { lat: 44.470598015856034, lng: -72.68630668847592 };
+    // The map, centered at Uluru
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 16,
+      center: stowe,
+      disableDefaultUI:true,
+      zoomControl:true,
+    });
+    // The marker, positioned at Uluru
+    const marker = new google.maps.Marker({
+      position: stowe,
+      map: map,
+    });
+  }
+  
+  window.initMap = initMap;
