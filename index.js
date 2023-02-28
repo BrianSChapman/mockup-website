@@ -19,52 +19,33 @@
 
 // observer.observe(stickyNav);
 
-// Slider for the hero image
-// todo: Figure out why this slider doesn't work. This is from w3 schools howto _js_slideshow
+const buttons = document.querySelectorAll("[data-carousel-button]")
 
-showSlides = () => {
 
-    let slideIndex = 1;
-showSlides(slideIndex);
+buttons.forEach(button => {
+    button.addEventListener("click", () => {
+        const offset = button.dataset.carouselButton === "next" ? 1 : -1 
+        const slides = button.closest("[data-carousel]")
+        .querySelector("[data-slides]")
 
- plusSlides = (n) => {
-    showSlides(slideIndex += n);
+        const activeSlide = slides.querySelector("[data-active]")
+        let newIndex = [...slides.children].indexOf(activeSlide) + offset
+        if (newIndex < 0) newIndex = slides.children.length - 1;
+        if (newIndex >= slides.children.length) newIndex = 0;
+
+        slides.children[newIndex].dataset.active = true;
+        delete activeSlide.dataset.active;
+    })
+})
+
+var counter = 1;
+setInterval(function() {
+const imgSlides = document.getElementsByClassName("slide");
+counter++;
+if (counter > 4){
+    counter=1;
 }
-
-currentSlide =(n) => {
-    showSlides(slideIndex = n);
-}
-    const slides = document.getElementsByClassName("mySlides");
-    const dots = document.getElementsByClassName("dot");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n > 1) { slideIndex = slides.length }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].style.className.replace(" active", "");
-    }
-
-    slides[slideIndex-1].style.display = "block";
-    dots[slideindex-1].className += " active";
-}
-
-
-
-
-// function showSlides() {
-//     let i;
-//     const slides = document.getElementsByClassName("mySlides");
-//     const dots = document.getElementsByClassName("dot");
-//     for (i=0; i < slides.length, i++;) {
-//         slides[i].style.display = "none";
-//     }
-//     slideIndex++;
-//     if ( slideIndex > slides.length) { slideIndex = 1 } 
-//         slides[slideIndex-1].style.display = "block";
-//         setTimeout(showSlides, 8000);
-//     }
-
+}, 5000);
 
 // Map for the Footer
 
