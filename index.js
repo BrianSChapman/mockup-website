@@ -1,14 +1,9 @@
 
 // jQuery initialization for the hamburger mobile menu and the hero-image slider
 
-//   $(document).ready(function() {
-//     $('.sidenav').sidenav();
-//     $('.slider').slider({ 
-//         fullWidth: true, 
-//         indicators: true });
-//   });  
-
-
+ $(document).ready(function() {
+    $('.sidenav').sidenav();
+  }); 
 // Navbar will scroll with you as you go down the page
 
 // const stickyNav = document.querySelector(".nav-links")

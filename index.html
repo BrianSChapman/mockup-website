@@ -21,7 +21,7 @@
     <header class="center-align">
         <a href="#" id="logo-text"">Stowe <img id="barrel" src="./Assets/barrel logo.png"alt = "Stowaway logo">Away</a>
         <nav class="nav-wrapper">
-              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons" id="hamburger">menu</i></a>
+              <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons" id="hamburger">menu</i></a>
               <div class = "nav-center">
               <ul class="hide-on-med-and-down">
                 <li><a class="nav-links" href="#About">ABOUT</a></li>
@@ -34,7 +34,7 @@
         </header>
 
         <!-- Hamburger menu -->
-        <ul class="sidenav" id="mobile-demo">
+        <ul class="sidenav" id="mobile-nav">
             <li><a href="#About">ABOUT</a></li>
             <li><a href="#Cocktails">COCKTAILS</a></li>
             <li><a href="#Store">FOOD</a></li>
@@ -47,19 +47,19 @@
    <section aria-label="Photos of the The Stowe Away">
     <ul data-slides>
         <li class="slide" data-active>
-            <img src="./Assets/relax.jpg" alt="Exterior of a restaurant that says 'Relax' on the window" class="responsive-img">
+            <img src="./Assets/relax.jpg" alt="Exterior of a restaurant that says 'Relax' on the window">
         </li>
         <li class="slide">
             <img src="./Assets/TikiDrink1.jpg" alt="Cocktail in a tiki mug next to a beer on a barrel table" class="responsive-img">
         </li>
         <li class="slide">
-            <img src="./Assets/busyBar.jpg" alt="Busy bar space with wooden wicker lighting." class="responsive-img">
+            <img src="./Assets/busyBar.jpg" alt="Busy bar space with wooden wicker lighting.">
         </li>
         <li class="slide">
-            <img src="./Assets/cocktailFlight.jpg" alt="Three colorful cocktails in a row on a bar top." class="responsive-img">
+            <img src="./Assets/cocktailFlight.jpg" alt="Three colorful cocktails in a row on a bar top.">
         </li>
         <li class="slide">
-            <img src="./Assets/gianluca-riccio-ZK-4SnogcBE-unsplash -resize.jpg" alt="Overhead photo of a tiki mug with a cherry in it." class="responsive-img">
+            <img src="./Assets/gianluca-riccio-ZK-4SnogcBE-unsplash -resize.jpg" alt="Overhead photo of a tiki mug with a cherry in it.">
         </li>
    </section>
         </div>
@@ -80,7 +80,7 @@
     <h4 class="cocktails-container" id="cocktails-header">COCKTAILS FROM BEYOND OUR SHORES</h4>
     <p id="cocktail-intro">Lacinia quis vel eros donec ac odio tempor. Elit pellentesque habitant morbi tristique senectus et netus. Orci nulla pellentesque dignissim enim sit. Viverra adipiscing at in tellus integer feugiat scelerisque. Sed faucibus turpis in eu mi. Lacinia quis vel eros donec ac odio tempor. Elit pellentesque habitant morbi tristique senectus et netus. Orci nulla pellentesque dignissim enim sit. Viverra adipiscing at in tellus integer feugiat scelerisque. Sed faucibus turpis in eu mi.  </p>
     </div>
-    <img  class="col s12 m4 l4 cocktails-container responsive-img" src="./Assets/torchedCocktail.png" id="cocktail-header-image" alt>
+    <img  class="col s12 m4 l4 cocktails-container" src="./Assets/torchedCocktail.png" id="cocktail-header-image" alt>
 </section>
 
 
@@ -193,7 +193,7 @@
             </div>
             </div>
             <div class="menu-item col s12 m4 l4">
-                <div class="drink-title">MAI TAI</div>
+                <div class="drink-title">BIG KAHUNA BURGER</div>
                 <div class="drink-description">Lacinia quis vel eros donec ac odio tempor. Elit pellentesque habitant mo. <br>
                     
         </div>
@@ -221,16 +221,15 @@
 <!-- Contact Form -->
 
 <section class ="center-align scrollspy" id="Contact">
-    <img src="./Assets/bamboo.jpg" class="responsive-img" id="bamboo">
-    <div class="row">
+    <img src="./Assets/thatchedRoof.jpg" class="responsive-img" id="thatchedImg">
         <div class="col s12 m6 l6">
-    <div id="contact-card" class="center-align">
-        <div class="card shadow center-align">
+    <div id="contact-card" class="center-align hoverable">
+        <div class="card shadow center-align hoverable">
             <div class="card-content">
-                <h4>CONTACT US</h4>
+                <h4 id="card-header">CONTACT US</h4>
             </div>
             <div class="card-content">
-            Whether it's a date night, a company event, or a break from the Vermont cold, come create memories in our little slice of paradise. Reach out with any questions you might have. Mahalo!
+            <p id="card-comment"> Whether it's a date night, a company event, or a break from the Vermont cold, come create memories in our little slice of paradise. Reach out with any questions you might have. Mahalo!</p>
               <div class="input-field">
                 <input id="first_name" type="text" class="validate">
                 <label for="first_name">Name</label>
@@ -246,7 +245,7 @@
               <button class="btn waves-effect waves-ligh btn-small" id="form-btn" type="submit" name="action">Submit
                 <i class="material-icons right">send</i>
               </button>
-            </div>
+              </div>
             </div>
 </section>
 
