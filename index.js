@@ -1,9 +1,4 @@
 
-// jQuery initialization for the hamburger mobile menu and the hero-image slider
-
- $(document).ready(function() {
-    $('.sidenav').sidenav();
-  }); 
 // Navbar will scroll with you as you go down the page
 
 // const stickyNav = document.querySelector(".nav-links")
@@ -41,6 +36,28 @@ if (counter > 4){
     counter=1;
 }
 }, 5000);
+
+
+// Form Submission 
+// document.getElemetbyId("form-btn").addEventListener("submit", function(e){
+//   e.preventDefault();
+
+//   const serviceId = "service_pj2hapz";
+//   const templateId = "template_aax8x2b";
+
+//   emailjs.SendForm(serviceId, templateId, this)
+//   .then((response) => {
+//     console.log("Success"), response.status, response.text);
+//     alert("Your message was sent!");
+//   },
+//   (error) => {
+//     console.log("Failed..", error);
+//     alert("Your message failed to send. Try again please!", error);
+//   }
+// );
+// });
+
+
 
 // Map for the Footer
 

@@ -37,20 +37,25 @@
         <ul class="sidenav" id="mobile-nav">
             <li><a href="#About">ABOUT</a></li>
             <li><a href="#Cocktails">COCKTAILS</a></li>
-            <li><a href="#Store">FOOD</a></li>
+            <li><a href="#Food">FOOD</a></li>
             <li><a href="#Contact">CONTACT</a></li>
+            <li> <div class="user-view">
+                  <img id="mobile-nav-img" src="./Assets/totem-poles-1520641-resize.jpg"></li>
+            </div>
           </ul>
+        </div>
+        
 
-        <div class="carousel hero-slider" data-carousel>
+        <div class="slider" data-carousel>
             <button class="carousel-button prev" data-carousel-button="prev">&#8249;</button>
             <button class="carousel-button next" data-carousel-button="next">&#8250;</button>
-   <section aria-label="Photos of the The Stowe Away">
+   <section aria-label="Photos of the The Stowe Away" id="carousel-container">
     <ul data-slides>
         <li class="slide" data-active>
-            <img src="./Assets/relax.jpg" alt="Exterior of a restaurant that says 'Relax' on the window">
+            <img src="./Assets/relax.jpg" alt="Exterior of a restaurant that says 'Relax' on the window" id="relax-img">
         </li>
         <li class="slide">
-            <img src="./Assets/TikiDrink1.jpg" alt="Cocktail in a tiki mug next to a beer on a barrel table" class="responsive-img">
+            <img src="./Assets/TikiDrink1.jpg" alt="Cocktail in a tiki mug next to a beer on a barrel table">
         </li>
         <li class="slide">
             <img src="./Assets/busyBar.jpg" alt="Busy bar space with wooden wicker lighting.">
@@ -242,7 +247,7 @@
                     <textarea id="textarea1" class="materialize-textarea"></textarea>
                     <label for="textarea1">Your Message</label>
               </div>
-              <button class="btn waves-effect waves-ligh btn-small" id="form-btn" type="submit" name="action">Submit
+              <button class="btn waves-effect waves-ligh btn-small" id="form-btn" type="submit" name="action" >Submit
                 <i class="material-icons right">send</i>
               </button>
               </div>
@@ -253,8 +258,7 @@
 <footer>
     <div class="container scrollspy">
         <div class="col l6 s12 center-align">
-            <a href="#" id="logo-text"">Stowe Away</a>
-
+            <a href="#" id="logo-text"">Stowe  <img id="barrel" src="./Assets/barrel logo.png"alt = "Stowaway logo">Away</a>
       <div class="row">
         <div class="col s12 m6 l6 footer-cols">        
             <div class="left-column-footer">  
@@ -305,13 +309,30 @@
 
    
 <script src="./index.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.6.3.min.js"
+  integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+  crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script async
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtaQMjyS3-5BvjrswD_esRDYhYeqJlCT8&callback=initMap">
 </script>
-    <script
-  src="https://code.jquery.com/jquery-3.6.3.min.js"
-  integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
-  crossorigin="anonymous"></script>
+  <script> $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+</script>
+<script
+type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+></script>
+
+<script type="text/javascript">      (function () {
+  emailjs.init("4bQ_rOUKTctgQNHs-");
+})();
+</script>
+<script>
+    emailjs.sendForm("service_pj2hapz", "template_aax8x2b", "#myForm")
+    </script
+
   </body>
 </html>
