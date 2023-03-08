@@ -1,4 +1,3 @@
-
 // Navbar will scroll with you as you go down the page
 
 // const stickyNav = document.querySelector(".nav-links")
@@ -9,74 +8,91 @@
 
 // observer.observe(stickyNav);
 
-const buttons = document.querySelectorAll("[data-carousel-button]")
+function toast() {}
 
+const buttons = document.querySelectorAll("[data-carousel-button]");
 
-buttons.forEach(button => {
-    button.addEventListener("click", () => {
-        const offset = button.dataset.carouselButton === "next" ? 1 : -1 
-        const slides = button.closest("[data-carousel]")
-        .querySelector("[data-slides]")
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const offset = button.dataset.carouselButton === "next" ? 1 : -1;
+    const slides = button
+      .closest("[data-carousel]")
+      .querySelector("[data-slides]");
 
-        const activeSlide = slides.querySelector("[data-active]")
-        let newIndex = [...slides.children].indexOf(activeSlide) + offset
-        if (newIndex < 0) newIndex = slides.children.length - 1;
-        if (newIndex >= slides.children.length) newIndex = 0;
+    const activeSlide = slides.querySelector("[data-active]");
+    let newIndex = [...slides.children].indexOf(activeSlide) + offset;
+    if (newIndex < 0) newIndex = slides.children.length - 1;
+    if (newIndex >= slides.children.length) newIndex = 0;
 
-        slides.children[newIndex].dataset.active = true;
-        delete activeSlide.dataset.active;
-    })
-})
+    slides.children[newIndex].dataset.active = true;
+    delete activeSlide.dataset.active;
+  });
+});
 
-var counter = 1;
-setInterval(function() {
-const imgSlides = document.getElementsByClassName("slide");
-counter++;
-if (counter > 4){
-    counter=1;
-}
-}, 5000);
+const images = document.querySelectorAll("slide");
 
+let i = 0;
 
-// Form Submission 
-// document.getElemetbyId("form-btn").addEventListener("submit", function(e){
-//   e.preventDefault();
+setInterval(function(){
 
-//   const serviceId = "service_pj2hapz";
-//   const templateId = "template_aax8x2b";
-
-//   emailjs.SendForm(serviceId, templateId, this)
-//   .then((response) => {
-//     console.log("Success"), response.status, response.text);
-//     alert("Your message was sent!");
-//   },
-//   (error) => {
-//     console.log("Failed..", error);
-//     alert("Your message failed to send. Try again please!", error);
-//   }
-// );
-// });
-
-
-
-// Map for the Footer
-
-// Initialize and add the map
-function initMap() {
-    // The location of Uluru
-    const stowe = { lat: 44.470598015856034, lng: -72.68630668847592 };
-    // The map, centered at Uluru
-    const map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 16,
-      center: stowe,
-      disableDefaultUI:true,
-      zoomControl:true,
-    });
-    // The marker, positioned at Uluru
-    const marker = new google.maps.Marker({
-      position: stowe,
-      map: map,
-    });
+  if(i == 0) {
+    images[i].style.display = 'block';
+  } else if(i == images.length ) {
+    images[i - 1].style.display = 'none';
+    images[0].style.display = 'block';
+    i = 0;
+  } else {
+    images[i - 1].style.display = 'none';
+    images[i].style.display = 'block';
   }
   
-  window.initMap = initMap;
+ i++;
+}, 5000);
+
+// Contact form logic
+function sendMail() {
+  const params = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("textarea1").value,
+  };
+
+  const serviceId = "service_pj2hapz";
+  const templateId = "template_xmmuxbb";
+
+  emailjs.sendForm(serviceId, templateId, "#my-form").then(
+    (response) => {
+      console.log("Success", response.status, response.text);
+      alert("Your message was sent!");
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("textarea1").value = "";
+    },
+    (error) => {
+      console.log("Failed..", error);
+      alert("Your message failed to send. Try again please!", error);
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("textarea1").value = "";
+    }
+  );
+}
+
+// todo: Form properly sends to email but none of the fields work. Check Emailjs template to see where the issue is.
+
+// Google Map
+function initMap() {
+  const stowe = { lat: 44.470598015856034, lng: -72.68630668847592 };
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 16,
+    center: stowe,
+    disableDefaultUI: true,
+    zoomControl: true,
+  });
+  // Arrow marker on the map
+  const marker = new google.maps.Marker({
+    position: stowe,
+    map: map,
+  });
+}
+window.initMap = initMap;

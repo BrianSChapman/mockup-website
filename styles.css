@@ -1,357 +1,369 @@
 :root {
-    --cream: #F4F1DE;
-    --red-orange: #E07A5F;
-    --dark: #082214;
-    --soft-green: #81B29A;
-    --mustard:#F2CC8F;
+  --cream: #f4f1de;
+  --red-orange: #e07a5f;
+  --dark: #082214;
+  --soft-green: #81b29a;
+  --mustard: #f2cc8f;
 }
 
-*, *::before, *::after {box-sizing: border-box}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 body {
-    background-color: black;
-    font-family: 'Noto Serif Khojki', serif;
+  background-color: black;
+  font-family: "Noto Serif Khojki", serif;
 }
 
 #logo-text {
-    font-family: 'Babylonica', cursive;
-    font-size: 70px;
-    color: var(--cream);
+  font-family: "Babylonica", cursive;
+  font-size: 70px;
+  color: var(--cream);
 }
 
 #barrel {
-  opacity:65%;
-  margin-top:1%;
+  opacity: 65%;
+  margin-top: 1%;
 }
 
 .nav-center {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .nav-links {
-    font-weight:900;
-    font-size: 16px;
-    color: var(--cream);
-    position: sticky;
-    top: -1px;
+  font-weight: 900;
+  font-size: 16px;
+  color: var(--cream);
+  top: -1px;
 }
 
-.nav-links:hover, .nav-links:focus {
-    color: var(--mustard);
-}
-
-#mobile-menu {
-    background-color: var(--dark);
-    color:var(--cream);
+.nav-links:hover,
+.nav-links:focus {
+  color: var(--mustard);
 }
 
 #hamburger {
-    color:var(--cream);
+  color: var(--cream);
 }
 
-.sidenav {
-    background-color: var(--dark);
+#mobile-nav, .nav-wrapper {
+  background-color: black;
+  color:var(--cream);
+}
+
+.sidenav li > a {
+    color: var(--cream);
 }
 
 #mobile-nav-img {
-    width:100%;
-    border-radius: 5%;
-}
-
-
-.nav-wrapper {
-background-color: black;
-color: var(--cream);
-}
-
-.slider {
-    position: relative;
-    max-height: 750px;
-    width:100%;
+  width: 100%;
+  border-radius: 5%;
 }
 
 .carousel > ul {
-    margin:0;
-    padding: 0;
-    list-style:none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .slide {
-    position:absolute;
-    inset: 0;
-    opacity: 0;
-    transition: 200ms opacity ease-in-out;
-    transition-delay: 200ms;
-    height:850px;
-}
-
-#carousel-container {
-    width:100%;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 200ms;
+  height: 850px;
 }
 
 .slide[data-active] {
-    opacity:1;
-    z-index:1;
-    transition-delay: 0ms;
+  opacity: 1;
+  z-index: 1;
+  transition-delay: 0ms;
 }
 
 .slide > img {
-    position:relative;
-    width:100%;
-    height:70%;
-    object-fit:cover;
-    object-position: 25%;
+  position: relative;
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  object-position: 25%;
 }
 
 #relax-img {
-    object-position: 50% 20%;
+  object-position: 50% 20%;
+}
+
+#busy-bar {
+  object-position: 50% 80%;
+}
+
+#colorful {
+  object-position: 50% 65%;
 }
 
 .carousel-button {
-    position:absolute;
-    background:none;
-    border:none;
-    font-size:4rem;
-    z-index:2;
-    top:50%;
-    color:var(--cream);
-    transform: translateY(-50%);
-    cursor:pointer;
-    padding:0 .5rem;
-
+  position: absolute;
+  background: none;
+  border: none;
+  font-size: 4rem;
+  z-index: 2;
+  top: 50%;
+  color: var(--cream);
+  transform: translateY(-50%);
+  cursor: pointer;
+  padding: 0 0.5rem;
+}
+.carousel-button:focus,
+.carousel-button:hover {
+  color: var(--mustard);
 }
 
-.carousel-button :focus, 
-.carousel-button :hover {
-    color:antiquewhite;
-
-}
-
-.carousel :focus {
-    outline: 1px solid black;
+.carousel-button:focus {
+  background: none;
+  outline: 0;
 }
 
 .carousel-button.prev {
-    left: 1rem;
+  left: 1rem;
 }
 
 .carousel-button.next {
-    right: 1rem;
+  right: 1rem;
 }
 
-/* about section/ banner image */
-#tapa-cloth {
-   position: relative;
-   width:100%;
-   height:950px;
-   object-fit:cover;
-   object-position: center;
+#about {
+  position: relative;
+  background-color: black;
+  background-image: url("./assets/tapaPrint.png");
+  background-size: cover;
+  padding-top: 15%;
+  padding-bottom: 50%;
+  background-repeat: no-repeat;
 }
 
-#about-section-text {
-    border: solid 10px var(--dark);
+#about-section-container {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 35%;
+  padding-right: 20%;
+  top: 30%;
 }
 
 #about-section-header {
-    font-weight: 700;
-    top: 125%;
-
+  font-weight: 700;
+  font-size: 250%;
 }
 
 #about-body {
-    top: 145%;
-    text-indent: 1cm;
-    text-align:center;
-
-}
-
-.about-section {
-    color:black;
-    position: absolute;
-    bottom: 50%;
-    left: 25%;
-    margin-right:20%;
-    margin-left: 5%;
+  text-indent: 1cm;
+  text-align: center;
+  padding-top:3%;
 }
 
 /* about section END */
 
 /* cocktail menu */
 .cocktails-container {
-    color: var(--cream);
-     font-family: 'Noto Serif Khojki', serif;
-     margin-top:10%;
+  color: var(--cream);
+  font-family: "Noto Serif Khojki", serif;
+  margin-top: 10%;
 }
 
 .food-container {
-    color: var(--cream);
-    font-family: 'Noto Serif Khojki', serif;
+  color: var(--cream);
+  font-family: "Noto Serif Khojki", serif;
 }
 
 #cocktails-header {
-    margin-top: 15%;
+  margin-top: 15%;
 }
 
 #cocktail-intro {
-    margin-right: 10%; 
-    margin-top:8%;
-    color:var(--soft-green);
+  margin: 50px 35px 0 25px;
+  color: var(--soft-green);
 }
 
 #cocktail-header-image {
-    object-fit: cover;
-    max-height: 400px;
-    
+  object-fit: cover;
+  max-height: 375px;
 }
 
 .cocktail-menu-image {
-    border-radius: 5%;
-    opacity:85%;
-    object-fit:cover;
+  border-radius: 5%;
+  opacity: 85%;
+  object-fit: cover;
 }
 
 #food-title-image {
-    border-radius: 5%;
-    opacity:85%;
-    object-fit:contain;
-    opacity: 75%;
+  border-radius: 5%;
+  opacity: 85%;
+  object-fit: contain;
+  opacity: 75%;
 }
 
-
 #cocktail-list-header {
-    margin-left: 55%;
-    margin-bottom:5%;
-    color:var(--cream);
+  margin-left: 55%;
+  margin-bottom: 5%;
+  color: var(--cream);
 }
 
 .menu-item {
-    color:var(--soft-green);
-    margin-bottom: 2%;
+  color: var(--soft-green);
+  margin-bottom: 2%;
 }
 
 .drink-title {
-    color:var(--cream);
-    font-size: 20px;
+  color: var(--cream);
+  font-size: 20px;
 }
 
 .drink-origin {
-    font-size:15px;
+  font-size: 15px;
 }
 
 .drink-description {
-    margin: 20px 48px 5px 0;
+  margin: 20px 48px 5px 0;
 }
 
 .strength {
-    color:var(--red-orange);
-    font-size: 13px;
+  color: var(--red-orange);
+  font-size: 13px;
 }
 
 .small {
-    color: var(--mustard);
-    padding: auto; 
+  color: var(--mustard);
+  padding: auto;
 }
 
 #stem-drink {
-    max-height: 600px;
+  max-height: 600px;
 }
 
 #drink-strength-descr {
-    color: var(--cream);
+  color: var(--cream);
 }
 
-#contact-banner{
-    position: relative;
-    width:100%;
-    max-height: 900px;
- }
+#contact-banner {
+  position: relative;
+  width: 100%;
+  max-height: 900px;
+}
 
 footer {
-    background-color: var(--dark);
-    color: var(--cream);
+  background-color: var(--dark);
+  color: var(--cream);
 }
 
 .footer-links {
-    margin-top:5%;
-    font-weight:900;
-    font-size: 20px;
-    color: var(--cream);
+  margin-top: 5%;
+  font-weight: 900;
+  font-size: 20px;
+  color: var(--cream);
 }
 
 /* Sizing for the map in the footer */
 #map {
-    height: 300px;
-    width: 100%;
-    margin-top: 25px;
-    border-radius: 2%;
+  height: 300px;
+  width: 100%;
+  margin-top: 25px;
+  border-radius: 2%;
 }
 
-.card, .card-content {
-    border-radius: 3%;
-    background-color:var(--dark);
-    color:var(--cream);
-}
+#contact {
 
+    background-color: black;
+    background-image: url("./assets/thatchedRoof.jpg");
+    background-size: cover;
+    padding-top: 5%;
+    padding-bottom:5%;
+    background-repeat: no-repeat;
+  }
+
+.card,
+.card-content {
+  border-radius: 3%;
+  background-color: var(--dark);
+  color: var(--cream);
+}
 
 #contact-card {
-    position:absolute;
-    bottom: -553%;
-    right: 30%;
-    width:38%;
-    text-align:center;
-    opacity:90%;
-    background-color: var(--dark);
-    border: solid 1px var(--cream);
+  width: 38%;
+  text-align: center;
+  opacity: 90%;
+  background-color: var(--dark);
+  border: solid 1px var(--cream);
+  margin-left: 30%;
+  
 }
 
-.input-field {
-    color:var(--cream);
+#name,
+#email,
+#textarea1 {
+  color: var(--cream);
 }
 
 #card-header {
-    margin:auto;
+  margin: auto;
 }
 
-  /* label color */
-  .input-field label {
-    color: var(--cream);
-  }
+/* label color */
+.input-field label {
+  color: var(--cream);
+}
 
 #card-comment {
-    margin: 0 8% 2% 8%;
-    font-size: 15px;
+  margin: 0 8% 2% 8%;
+  font-size: 13px;
 }
-
 
 .left-column-footer {
-    margin-top:9%;
-    margin-bottom:9%;
+  margin-top: 9%;
+  margin-bottom: 9%;
 }
 
-
 .social-logo {
-    width: 12%;
-    height:10%;
-    margin-top:2%;
+  width: 12%;
+  height: 10%;
+  margin-top: 2%;
 }
 
 .social-logo:hover {
-    background-color: var(--cream);
-    border-radius: 5%;
+  background-color: var(--cream);
+  border-radius: 50%;
 }
 
-#thatchedImg {
-    padding-top: 2%;
-    position: relative;
-    width:100%;
-    height:650px;
-    object-fit:cover;
-    object-position: center;
-    opacity:75%;
+@media screen and (max-width: 992px) {
+    #logo-text, #barrel {
+        padding-top:5%;
+        padding-bottom:0;
+    }
+    #about-section-header {
+        font-weight: 700;
+        font-size: 200%;  
+    }
+    #about-body {
+        font-size: 13px;
+    }
+
+    #contact-container {
+        padding-bottom:5%;
+    }
 }
+
+@media screen and (max-width: 769px) {
+    .slide > img {  
+        height: 47%;
+      }
+      .about-section-container {
+        top: 8%;
+    }
+    }
+
 
 /*  todo:
-Design for desktop displays from 1024×768 through 1920×1080
-Design for mobile displays from 360×640 through 414×896
-Design for tablet displays from 601×962 through 1280×800 */
+media queries: 
+/* max-width: 992 / max-width: 769 / max-width: 576*/
