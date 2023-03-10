@@ -138,7 +138,7 @@ body {
   right: 1rem;
 }
 
-#about {
+#About {
   position: relative;
   background-color: black;
   background-image: url("./assets/tapaPrint.png");
@@ -277,7 +277,7 @@ footer {
   border-radius: 2%;
 }
 
-#contact {
+#Contact {
 
     background-color: black;
     background-image: url("./assets/thatchedRoof.jpg");
