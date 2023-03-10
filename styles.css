@@ -141,7 +141,7 @@ body {
 #About {
   position: relative;
   background-color: black;
-  background-image: url("./assets/tapaPrint.png");
+  background-image: url("/assets/tapaPrint.png");
   background-size: cover;
   padding-top: 15%;
   padding-bottom: 50%;
@@ -280,7 +280,7 @@ footer {
 #Contact {
 
     background-color: black;
-    background-image: url("./assets/thatchedRoof.jpg");
+    background-image: url("/assets/thatchedRoof.jpg");
     background-size: cover;
     padding-top: 5%;
     padding-bottom:5%;
